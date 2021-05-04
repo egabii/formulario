@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilo.css">
+  <title>formulario</title>
+</head>
+<body>
+  <main class="container">
+    <header class="container-header">
+      <p class="catedra">Catedra: Diseño de Sistemas - Grupo 2</p>
+      <h1>IT Service Request</h1>
+    </header>
+    <section class="container-body">
+      <p class="mandatory-fields-label"> * Campos Obligatorios </p>
+      <form id="formulario" novalidate> <!-- formulario -->
+        <section class="form-content">
+          <div class="field"> <!-- campo -->
+            <label class="field-label" for="fullname">Nombre y Apellido <span class="mandatory-mark">*</span></label>
+            <input class="field-input" type="text" id="fullname" placeholder="" autofocus />
+          </div>
+          <div class="field">
+            <label class="field-label" for="department">Departamento <span class="mandatory-mark">*</span></label>
+            <input class="field-input" type="text" id="department" placeholder="" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="office">Oficina <span class="mandatory-mark">*</span></label>
+            <input class="field-input" type="text" id="office" placeholder="" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="email-address">E-mail <span class="mandatory-mark">*</span></label>
+            <input class="field-input" type="email" id="email-address" placeholder="myname@example.com" />
+          </div>
+          <div class="fieldset" aria-labelledby="tipo-problema-title">
+            <p id="tipo-problema-title"> Tipo de problema <span class="mandatory-mark">*</span></p>
+            <div class="group-button">
+              <div class="field">
+                <input type="checkbox" value="workstation" id="workstation" class="tipo-problema" />
+                <label for="workstation">Equipo</label>
+              </div>
+              <div class="field">
+                <input type="checkbox" value="email" id="email-issues" class="tipo-problema" required />
+                <label for="email-issues">Email</label>
+              </div>
+              <div class="field">
+                <input type="checkbox" value="redes" id="network" class="tipo-problema" required />
+                <label for="network">Redes</label>
+  
+              </div>
+              <div class="field">
+                <input type="checkbox" value="phone" id="phone" class="tipo-problema" required />
+                <label for="phone">Telefono</label>
+              </div>
+              <div class="field">
+                <input type="checkbox" value="others" id="others" class="tipo-problema" required />
+                <label for="others">Otro</label>
+              </div>
+            </div>
+          </div>
+          <!-- textarea -->
+          <div class="field">
+            <label for="description">Especificar Problema <span class="mandatory-mark">*</span></label>
+            <textarea class="field-input"  name="especificar_problema" id="description" cols="30" rows="10" placeholder="Type Here..."></textarea>
+          </div>
+          <div class="field">
+            <label for="comments">Comentarios y Preguntas</label>
+            <textarea class="field-input" name="preguntas" id="comments" cols="30" rows="10" placeholder="Type Here..."></textarea>
+          </div>
+        </section>
+        <section class="form-footer">
+          <button id="enviar">Enviar</button>
+        </section>
+      </form>
+    </section>
+  </main>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
